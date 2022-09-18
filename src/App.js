@@ -20,7 +20,7 @@ const OPTIONS = {
 export default function App(){
 
   // const BASE_URL 
-
+  console.log("process.env", process.env)
   const {REACT_APP_BASE_API_URL, REACT_APP_CLOUDINARY_UPLOAD_PRESET, REACT_APP_CLOUDINARY_CLOUD_NAME, REACT_APP_CLOUDINARY_API_KEY} = process.env;
 
   const recordWebcam = useRecordWebcam(OPTIONS);
