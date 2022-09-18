@@ -22,6 +22,8 @@ export default function App(){
 
   // const BASE_URL 
 
+  const {REACT_APP_BASE_API_URL, REACT_APP_CLOUDINARY_UPLOAD_PRESET, REACT_APP_CLOUDINARY_CLOUD_NAME, REACT_APP_CLOUDINARY_API_KEY} = process.env;
+
   const recordWebcam = useRecordWebcam(OPTIONS);
   const [uploadPercetage, setUploadPercentage] = useState(0);
 
@@ -49,18 +51,18 @@ export default function App(){
     };
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", "recordings_upload");
-    formData.append("cloud_name", "djvombbc6");
-    formData.append("api_key", "114216346929923");
+    formData.append("upload_preset", REACT_APP_CLOUDINARY_UPLOAD_PRESET);
+    formData.append("cloud_name", REACT_APP_CLOUDINARY_CLOUD_NAME);
+    formData.append("api_key", REACT_APP_CLOUDINARY_API_KEY);
     // formData.append("api_key", "CLOUDINARY_URL=cloudinary://447637346711745:KoUMtYiKu4DymV7ygpBnbwQ7I0E@shubjain")
 
-    const cloudnaryUrl = "https://api.cloudinary.com/v1_1/djvombbc6/video/upload";
+    const cloudnaryUrl = `https://api.cloudinary.com/v1_1/${REACT_APP_CLOUDINARY_CLOUD_NAME}/video/upload`;
     const cloudinaryResponse = await instance.post(cloudnaryUrl, formData, options)
     console.log("cloudnaryResponse", cloudinaryResponse.data);
     const videoUrl = cloudinaryResponse.data.url;
 
     // Client fetch api to post all webcam recording to server db
-    const uploadResponse = await axios.post(`${BASE_API_URL}/api/upload_recording`, { name: fileName, dateModified: saving_time, url: videoUrl})
+    const uploadResponse = await axios.post(`${REACT_APP_BASE_API_URL}/api/upload_recording`, { name: fileName, dateModified: saving_time, url: videoUrl})
           
   };
 

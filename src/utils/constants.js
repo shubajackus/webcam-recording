@@ -1,1 +1,0 @@
-export const BASE_API_URL = 'https://webcam-recording-webapp.herokuapp.com';
