@@ -16,7 +16,7 @@ export default function Admin(){
   },[])
 
   const getAllRecordings = async () => {
-    const response = await axios.get(`${'http://localhost:8000'}/api/get_all_recordings`);
+    const response = await axios.get(`${BASE_API_URL}/api/get_all_recordings`);
     setRecordingsData(response.data.data);
   }
 
