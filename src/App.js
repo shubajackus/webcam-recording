@@ -1,6 +1,5 @@
 import { Button, Progress } from "antd";
 import axios from "axios";
-import { BASE_API_URL } from "./utils/constants";
 
 import React, {useState} from "react";
 import "./styles.css";

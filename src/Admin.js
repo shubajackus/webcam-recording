@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import { Space, Table, Modal, Typography } from 'antd';
 import axios from "axios";
 import "./styles.css"
-import { BASE_API_URL } from "./utils/constants";
 
 export default function Admin(){
 
