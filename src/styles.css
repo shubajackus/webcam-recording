@@ -1,0 +1,54 @@
+.App {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.webcam_recording_main .webcam_recording_status{
+	/* margin: auto; */
+	width: 40%;
+	height: auto;
+	border: 3px solid #73AD21;
+	text-align: center;
+}
+
+.webcam_recording_buttons{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	/* text-align: center; */
+}
+  
+.container {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.record-submit-btn {
+	display: flex;
+	flex-direction: row;
+}
+
+.recorded-video{
+	width: 60%;
+}
+
+.open-close-camera{
+	display: flex;
+  justify-content: center;
+}
+
+.record-stop-btn{
+	display: flex;
+  justify-content: space-around;
+	margin-top: 20px;
+}
+
+.progress-bar{
+	margin-top: 20px;
+	display: flex;
+  justify-content: center;
+}
+
+.recordings-data{
+	margin: 50px;
+}

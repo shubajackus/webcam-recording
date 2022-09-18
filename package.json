@@ -6,16 +6,28 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "antd": "^4.23.2",
+    "axios": "^0.27.2",
+    "file-saver": "^2.0.5",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-media-recorder": "1.6.3",
+    "react-record-webcam": "0.0.14",
+    "react-router-dom": "^6.4.0",
+    "react-scripts": "4.0.0",
+    "react-video-recorder": "3.19.1",
+    "react-webcam": "^7.0.1",
+    "recordrtc": "5.6.2",
+    "styled-components": "4.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start-client": "react-scripts start",
+    "build": "react-scripts build && (cd server && yarn install)",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "cd server && yarn start"
   },
   "eslintConfig": {
     "extends": [
